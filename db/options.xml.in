@@ -332,11 +332,17 @@
 		<subgroup name="Rotation">
 			<control id="tilt" type="value" name="Rotation (Tilt)" address="0x44"/>
 		</subgroup>
-        <subgroup name="Ratio">
+		<subgroup name="Ratio">
 			<control id="ratio" type="list" name="Screen ratio" address="0xF5">
 				<value id="1to1" name="1:1" value="0"/>
 				<value id="wide" name="Wide" value="1"/>
 				<value id="original" name="Original" value="2"/>
+			</control>
+		</subgroup>
+		<subgroup name="Scaling">
+			<control id="displayscaling" type="list" name="Display Scaling" address="0x86">
+				<value id="maxvertical" name="Maximum vertical image, preserve aspect ratio" />
+				<value id="fill" name="Linear expansion (compression) on H/V axes" />
 			</control>
 		</subgroup>
 	</group>

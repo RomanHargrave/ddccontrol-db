@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--- "Standard" controls -->
+<monitor name="Wacom Cintiq 13HD" init="standard">
+	<controls>
+		<control id="newcontrolvalue" address="0x02" />
+		<control id="defaults" address="0x04" />
+		<control id="defaultcolor" address="0x08" />
+		<control id="brightness" address="0x10" />
+		<control id="contrast" address="0x12" />
+
+		<control id="colorpreset" address="0x14">
+			<value id="5000k" value="0x04" />
+			<value id="6500k" value="0x05" />
+			<value id="9300k" value="0x08" />
+			<value id="user1" value="0x0B" />
+		</control>
+
+		<control id="red" address="0x16" />
+		<control id="green" address="0x18" />
+		<control id="blue" address="0x1A" />
+
+		<!-- Black levels are missing from the 1st-party tool, but repored by caps -->
+		<control id="redblack" address="0x6C"/>
+		<control id="greenblack" address="0x6E"/>
+		<control id="blueblack" address="0x70"/>
+
+		<!-- Display scaling (new in options.xml) -->
+		<control id="displayscaling" address="0x86">
+			<value id="maxvertical" value="0x03" />
+			<value id="fill" value="0x08" />
+		</control>
+
+		<!-- Other VCPs reported by caps, most are read-only
+		     - 0x02 - "New control value" (does this save the user1 preset?)
+		     - 0x52 - "Active Control"
+		     - 0xAC - Horizonal Frequency
+		     - 0xAE - Vertical Frequency
+		     - 0xB6 - Display technology type
+		     - 0xC8 - Display controller type
+		     - 0xDF - VCP Version
+		-->
+	</controls>
+</monitor>
